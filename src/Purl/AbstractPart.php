@@ -158,7 +158,7 @@ abstract class AbstractPart implements ArrayAccess
      *
      * @return void
      */
-    public function offsetUnset($key)
+    public function offsetUnset($key) : void
     {
         $this->remove($key);
     }
