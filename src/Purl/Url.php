@@ -262,9 +262,12 @@ class Url extends AbstractPart
     protected function doInitialize() : void
     {
         $parts = $this->getParser()->parseUrl($this->url);
+        var_dump($this->url);
+        var_dump($parts);
 
         foreach ($parts as $k => $v) {
             if (isset($this->data[$k])) {
+                echo $k . ' == skip<br>' . "\n";
                 continue;
             }
 
@@ -273,6 +276,8 @@ class Url extends AbstractPart
 
         foreach ($this->data as $key => $value) {
             $this->data[$key] = $this->preparePartValue($key, $value);
+            var_dump($key);
+            var_dump($this->data[$key]);
         }
     }
 
