@@ -148,7 +148,7 @@ abstract class AbstractPart implements ArrayAccess
      *
      * @return void
      */
-    public function offsetSet($key, $value)
+    public function offsetSet($key, $value) : void
     {
         $this->set($key, $value);
     }
